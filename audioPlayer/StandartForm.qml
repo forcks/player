@@ -1,21 +1,14 @@
-import QtQuick 2.12
-import QtQuick.Window 2.12
+import QtQuick 2.0
+import QtQuick.Window 2.11
 import QtQuick.Controls 2.12
+import QtQuick.Layouts 1.12
 
-Item{
-    property int _width: 100
-    property int _height: 50
-    property color _color: "lightgrey"
-    property alias _radius: mainRec.radius
-    property alias _borderSize: mainRec.border.width
+Rectangle{
+    property var _width: 30
+    property var _height: 20
+    property var _color: "#696969"
     width: _width
     height: _height
-    Rectangle{
-        id:mainRec
-        width: parent.width
-        height: parent.height
-        color: _color
-        radius: 0
-        border.width: 0;
-    }
+    radius: (parent.height+parent.width)/90
+    color: _color
 }
